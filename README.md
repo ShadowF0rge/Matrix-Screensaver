@@ -107,7 +107,71 @@ Edit `settings.py` to adjust:
 - `GLYPHS`: characters used by the animation
 - `FONT_CANDIDATES`: font families to try
 
-RGB colors use values from `0` to `255`.
+RGB colors use values from `0` to `255`, in the order `(red, green, blue)`.
+
+### Change the Matrix rain colors
+
+Open `settings.py` in your editor. Change `BACKGROUND_COLOR` for the background, `CRIMSON_HEAD_COLOR` for the brightest leading character, and `CRIMSON_TRAIL_COLORS` for the colors of the trailing characters. The variable names still contain `CRIMSON`, but you can use any RGB colors.
+
+For example, replace the existing three color settings with one of these palettes. Keep the rest of `settings.py` unchanged.
+
+#### Crimson Red (default)
+
+```python
+BACKGROUND_COLOR = (3, 0, 2)
+CRIMSON_HEAD_COLOR = (255, 70, 95)
+CRIMSON_TRAIL_COLORS = (
+    (235, 20, 55),
+    (200, 12, 45),
+    (165, 8, 35),
+    (125, 5, 27),
+    (85, 3, 18),
+)
+```
+
+#### Matrix Green
+
+```python
+BACKGROUND_COLOR = (0, 2, 0)
+CRIMSON_HEAD_COLOR = (120, 255, 150)
+CRIMSON_TRAIL_COLORS = (
+    (50, 255, 100),
+    (20, 190, 70),
+    (10, 130, 45),
+    (5, 80, 25),
+    (2, 35, 10),
+)
+```
+
+#### Cyber Cyan
+
+```python
+BACKGROUND_COLOR = (0, 2, 6)
+CRIMSON_HEAD_COLOR = (100, 240, 255)
+CRIMSON_TRAIL_COLORS = (
+    (40, 200, 255),
+    (20, 145, 220),
+    (10, 95, 170),
+    (5, 55, 110),
+    (2, 25, 55),
+)
+```
+
+#### Neon Violet
+
+```python
+BACKGROUND_COLOR = (3, 0, 7)
+CRIMSON_HEAD_COLOR = (240, 130, 255)
+CRIMSON_TRAIL_COLORS = (
+    (220, 70, 255),
+    (175, 35, 220),
+    (130, 15, 175),
+    (85, 5, 115),
+    (40, 2, 55),
+)
+```
+
+After changing the values, save `settings.py` and restart the app with `python main.py` for the new colors to take effect.
 
 ## Project structure
 
@@ -191,4 +255,9 @@ Potential future improvements:
 
 ## License
 
-Choose a license before publishing the project publicly. For example, the MIT License is a common permissive option; add a `LICENSE` file if you decide to use it.
+MATRIX TERMINAL is licensed under the MIT License. You are free to use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the software, provided that the original copyright notice and permission notice are included.
+
+See the [`LICENSE`](LICENSE) file for the full license text.
+
+Copyright (c) 2026 Astral Contributors
+
